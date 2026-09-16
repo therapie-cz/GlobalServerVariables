@@ -35,7 +35,7 @@ public class MainCommand implements CommandExecutor, TabCompleter {
 	}
 
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-		if(!sender.hasPermission("servervariables.admin")){
+		if(!sender.hasPermission("globalservervariables.admin")){
 			return false;
 		}
 
@@ -70,14 +70,14 @@ public class MainCommand implements CommandExecutor, TabCompleter {
 	public void help(CommandSender sender, String[] args, FileConfiguration config, MessagesManager msgManager){
 		sender.sendMessage(MessagesManager.getLegacyColoredMessage("&7[ [ &8[&aServerVariables&8] &7] ]"));
 		sender.sendMessage(MessagesManager.getLegacyColoredMessage(" "));
-		sender.sendMessage(MessagesManager.getLegacyColoredMessage("&6/svar help &8Shows this message."));
-		sender.sendMessage(MessagesManager.getLegacyColoredMessage("&6/svar set <variable> <value> (optional)<player> (optional)silent:true &8Sets the value of a variable."));
-		sender.sendMessage(MessagesManager.getLegacyColoredMessage("&6/svar get <variable> (optional)<player> (optional)silent:true &8Gets the value from a variable."));
-		sender.sendMessage(MessagesManager.getLegacyColoredMessage("&6/svar add <variable> <value> (optional)<player> (optional)silent:true &8Adds a value to a variable (INTEGER or DOUBLE)."));
-		sender.sendMessage(MessagesManager.getLegacyColoredMessage("&6/svar reduce <variable> <value> (optional)<player> (optional)silent:true &8Reduces the value of a variable (INTEGER or DOUBLE)."));
-		sender.sendMessage(MessagesManager.getLegacyColoredMessage("&6/svar list <option> &8Manages a LIST type variable."));
-		sender.sendMessage(MessagesManager.getLegacyColoredMessage("&6/svar reset <variable> <value> (optional)<player> (optional)silent:true &8Resets the value of a variable."));
-		sender.sendMessage(MessagesManager.getLegacyColoredMessage("&6/svar reload &8Reloads the config."));
+		sender.sendMessage(MessagesManager.getLegacyColoredMessage("&6/gvar help &8Shows this message."));
+		sender.sendMessage(MessagesManager.getLegacyColoredMessage("&6/gvar set <variable> <value> (optional)<player> (optional)silent:true &8Sets the value of a variable."));
+		sender.sendMessage(MessagesManager.getLegacyColoredMessage("&6/gvar get <variable> (optional)<player> (optional)silent:true &8Gets the value from a variable."));
+		sender.sendMessage(MessagesManager.getLegacyColoredMessage("&6/gvar add <variable> <value> (optional)<player> (optional)silent:true &8Adds a value to a variable (INTEGER or DOUBLE)."));
+		sender.sendMessage(MessagesManager.getLegacyColoredMessage("&6/gvar reduce <variable> <value> (optional)<player> (optional)silent:true &8Reduces the value of a variable (INTEGER or DOUBLE)."));
+		sender.sendMessage(MessagesManager.getLegacyColoredMessage("&6/gvar list <option> &8Manages a LIST type variable."));
+		sender.sendMessage(MessagesManager.getLegacyColoredMessage("&6/gvar reset <variable> <value> (optional)<player> (optional)silent:true &8Resets the value of a variable."));
+		sender.sendMessage(MessagesManager.getLegacyColoredMessage("&6/gvar reload &8Reloads the config."));
 		sender.sendMessage(MessagesManager.getLegacyColoredMessage(" "));
 		sender.sendMessage(MessagesManager.getLegacyColoredMessage("&7[ [ &8[&aServerVariables&8] &7] ]"));
 
@@ -272,7 +272,7 @@ public class MainCommand implements CommandExecutor, TabCompleter {
 
 	@Override
 	public List<String> onTabComplete(CommandSender sender, Command command, String label, String[] args) {
-		if(!sender.hasPermission("servervariables.admin")){
+		if(!sender.hasPermission("globalservervariables.admin")){
 			return null;
 		}
 

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>svar.ajneb97</groupId>
-    <artifactId>ServerVariables</artifactId>
+    <artifactId>GlobalServerVariables</artifactId>
     <version>3.7.3</version>
     <packaging>jar</packaging>
 

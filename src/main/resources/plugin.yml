@@ -1,10 +1,10 @@
 main: svar.ajneb97.ServerVariables
 version: ${project.version}
-name: ServerVariables
+name: GlobalServerVariables
 api-version: 1.13
 softdepend: [PlaceholderAPI]
 
 commands:
-  servervariables:
-    description: Main command of ServerVariables
-    aliases: [svar]
+  globalservervariables:
+    description: Main command of GlobalServerVariables
+    aliases: [gvar]

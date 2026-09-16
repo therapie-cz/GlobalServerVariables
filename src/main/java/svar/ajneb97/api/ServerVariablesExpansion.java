@@ -31,7 +31,7 @@ public class ServerVariablesExpansion extends PlaceholderExpansion {
 
     @Override
     public String getIdentifier(){
-        return "servervariables";
+        return "globalservervariables";
     }
 
     @Override

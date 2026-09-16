@@ -167,7 +167,7 @@ public class ServerVariables extends JavaPlugin {
     }
 
     public void registerCommands(){
-        this.getCommand("servervariables").setExecutor(new MainCommand(this));
+        this.getCommand("globalservervariables").setExecutor(new MainCommand(this));
     }
 
     public MySQLConnection getMySQLConnection() {
